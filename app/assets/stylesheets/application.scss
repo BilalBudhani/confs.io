@@ -27,7 +27,7 @@ body {
   padding: 3em 1em;
 
   .event {
-    padding: 4em 2em;
+    padding: 3em 2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,5 +60,11 @@ body {
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35), 1px 1px 5px rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
+  }
+}
+
+@media (max-width: 425px) {
+  .conferences {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   }
 }
