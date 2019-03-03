@@ -14,7 +14,51 @@
  *= require_self
  */
 
-
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+.conferences {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-gap: 2em;
+  max-width: calc(80em + 28px);
+  margin: 0 auto;
+  padding: 3em 1em;
+
+  .event {
+    padding: 4em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    color: #fff;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    background: #000;
+
+    .backdrop {
+      background: url("https://images.unsplash.com/photo-1506055670533-18d4a6d3f36f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjUzMzM1fQ")
+        center;
+      background-size: cover;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .title {
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35), 1px 1px 5px rgba(0, 0, 0, 0.5);
+      margin: 0;
+      z-index: 1;
+    }
+
+    span {
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35), 1px 1px 5px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+  }
 }

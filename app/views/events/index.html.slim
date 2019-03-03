@@ -1,3 +1,6 @@
-- @events.each do |event|
-  div
-    strong #{event.conference.name} - #{event.starts_on}
+.conferences
+  - @events.each do |event|
+    .event
+      .backdrop
+      h2.title #{event.conference.name}
+      span #{event.starts_on.strftime("%b %d, %Y")}
